@@ -31,9 +31,6 @@
 - name: Install systemd service for TFS for otsmanager
   template: src=templates/tfs.service dest=/home/otsmanager/.config/systemd/user/ owner=otsmanager group=otsmanager mode=0644
 
-- name: loginctl enable-linger otsmanager
-  command: loginctl enable-linger otsmanager
-
 - name: Install .otsmanager shell configuration
   template: src=templates/.otsmanager dest=/home/otsmanager/.otsmanager owner=otsmanager group=otsmanager mode=0644
 
